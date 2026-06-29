@@ -43,146 +43,86 @@
       content: '';
       position: absolute; inset: 0;
       background: repeating-linear-gradient(
-        90deg,
-        transparent,
-        transparent 60px,
-        rgba(184,132,42,.07) 60px,
-        rgba(184,132,42,.07) 61px
+        90deg, transparent, transparent 60px,
+        rgba(184,132,42,.07) 60px, rgba(184,132,42,.07) 61px
       );
       pointer-events: none;
     }
     .header-eyebrow {
       font-family: 'DM Mono', monospace;
-      font-size: .72rem;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: .9rem;
+      font-size: .72rem; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: .9rem;
     }
     header h1 {
       font-family: 'Playfair Display', Georgia, serif;
       font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 700;
-      line-height: 1.15;
-      margin-bottom: .8rem;
+      font-weight: 700; line-height: 1.15; margin-bottom: .8rem;
     }
-    header h1 em {
-      font-style: italic;
-      color: var(--gold);
-    }
+    header h1 em { font-style: italic; color: var(--gold); }
     header p.subtitle {
-      font-size: 1.05rem;
-      color: rgba(246,241,232,.75);
-      max-width: 540px;
-      margin: 0 auto;
-      font-weight: 300;
+      font-size: 1.05rem; color: rgba(246,241,232,.75);
+      max-width: 540px; margin: 0 auto; font-weight: 300;
     }
     .header-seal {
-      margin-top: 1.8rem;
-      display: inline-block;
-      width: 52px; height: 52px;
-      border: 2px solid var(--gold);
-      border-radius: 50%;
-      line-height: 52px;
-      font-size: 1.5rem;
+      margin-top: 1.8rem; display: inline-block;
+      width: 52px; height: 52px; border: 2px solid var(--gold);
+      border-radius: 50%; line-height: 52px; font-size: 1.5rem;
     }
 
     /* ── LAYOUT ── */
     .container { max-width: 780px; margin: 0 auto; padding: 0 1.4rem; }
-
     section { padding: 3.2rem 0; }
     section + section { border-top: 1px solid var(--border); }
 
     h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 1.55rem;
-      font-weight: 700;
-      color: var(--ink);
-      margin-bottom: 1rem;
+      font-size: 1.55rem; font-weight: 700; color: var(--ink); margin-bottom: 1rem;
     }
     h2 .num {
-      font-family: 'DM Mono', monospace;
-      font-size: .8rem;
-      color: var(--gold);
-      display: block;
-      letter-spacing: .12em;
-      margin-bottom: .3rem;
+      font-family: 'DM Mono', monospace; font-size: .8rem; color: var(--gold);
+      display: block; letter-spacing: .12em; margin-bottom: .3rem;
     }
-
     p { margin-bottom: .9rem; color: var(--ink-soft); }
     p:last-child { margin-bottom: 0; }
     strong { color: var(--ink); font-weight: 600; }
 
-    /* ── CARDS / BOXES ── */
+    /* ── CARDS ── */
     .card {
-      background: var(--parchment);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.4rem 1.6rem;
-      margin: 1.2rem 0;
+      background: var(--parchment); border: 1px solid var(--border);
+      border-radius: 10px; padding: 1.4rem 1.6rem; margin: 1.2rem 0;
     }
     .card-title {
-      font-family: 'DM Mono', monospace;
-      font-size: .75rem;
-      letter-spacing: .13em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: .6rem;
+      font-family: 'DM Mono', monospace; font-size: .75rem;
+      letter-spacing: .13em; text-transform: uppercase; color: var(--gold); margin-bottom: .6rem;
     }
 
     /* ── PROMPT EXAMPLES ── */
     .prompt-compare { display: grid; gap: 1rem; margin: 1.2rem 0; }
     @media(min-width: 600px) { .prompt-compare { grid-template-columns: 1fr 1fr; } }
-
     .prompt-box {
-      background: white;
-      border-radius: 8px;
-      padding: 1.1rem 1.3rem;
+      background: white; border-radius: 8px; padding: 1.1rem 1.3rem;
       border-left: 4px solid var(--border);
     }
     .prompt-box.bad  { border-left-color: var(--rose); }
     .prompt-box.good { border-left-color: var(--sage); }
-
     .prompt-label {
-      font-family: 'DM Mono', monospace;
-      font-size: .68rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      margin-bottom: .5rem;
+      font-family: 'DM Mono', monospace; font-size: .68rem;
+      letter-spacing: .12em; text-transform: uppercase; margin-bottom: .5rem;
     }
     .bad  .prompt-label { color: var(--rose); }
     .good .prompt-label { color: var(--sage); }
-
-    .prompt-text {
-      font-family: 'DM Mono', monospace;
-      font-size: .82rem;
-      color: var(--ink);
-      line-height: 1.5;
-    }
-
-    .prompt-why {
-      font-size: .83rem;
-      color: var(--ink-soft);
-      margin-top: .6rem;
-      font-style: italic;
-    }
+    .prompt-text { font-family: 'DM Mono', monospace; font-size: .82rem; color: var(--ink); line-height: 1.5; }
+    .prompt-why { font-size: .83rem; color: var(--ink-soft); margin-top: .6rem; font-style: italic; }
 
     /* ── RÈGLES ── */
     .rules { list-style: none; display: flex; flex-direction: column; gap: .75rem; margin: 1.1rem 0; }
     .rules li {
       display: flex; align-items: flex-start; gap: .85rem;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: .9rem 1.1rem;
+      background: white; border: 1px solid var(--border); border-radius: 8px; padding: .9rem 1.1rem;
     }
     .rule-icon {
-      flex-shrink: 0;
-      width: 32px; height: 32px;
-      background: var(--gold-pale);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-size: .95rem;
+      flex-shrink: 0; width: 32px; height: 32px; background: var(--gold-pale);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: .95rem;
     }
     .rule-body strong { display: block; font-size: .95rem; margin-bottom: .15rem; color: var(--ink); }
     .rule-body span { font-size: .85rem; color: var(--ink-soft); }
@@ -190,184 +130,83 @@
     /* ── PLAYGROUND ── */
     #playground {
       background: linear-gradient(135deg, #2a1f14 0%, #1c1612 100%);
-      color: var(--parchment);
-      border-radius: 16px;
-      padding: 2.2rem 2rem;
-      margin: 2rem 0;
-      box-shadow: 0 8px 40px var(--shadow);
-      position: relative;
-      overflow: hidden;
+      color: var(--parchment); border-radius: 16px; padding: 2.2rem 2rem;
+      margin: 2rem 0; box-shadow: 0 8px 40px var(--shadow); position: relative; overflow: hidden;
     }
     #playground::before {
-      content: '✦';
-      position: absolute;
-      right: 1.5rem; top: 1.2rem;
-      font-size: 1.8rem;
-      color: rgba(184,132,42,.25);
+      content: '✦'; position: absolute; right: 1.5rem; top: 1.2rem;
+      font-size: 1.8rem; color: rgba(184,132,42,.25);
     }
-    #playground h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
-      color: var(--gold);
-      margin-bottom: .4rem;
-    }
-    #playground .play-desc {
-      font-size: .88rem;
-      color: rgba(246,241,232,.65);
-      margin-bottom: 1.5rem;
-      font-weight: 300;
-    }
+    #playground h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--gold); margin-bottom: .4rem; }
+    #playground .play-desc { font-size: .88rem; color: rgba(246,241,232,.65); margin-bottom: 1.4rem; font-weight: 300; }
 
-    .scenario-btns {
-      display: flex; flex-wrap: wrap; gap: .5rem;
-      margin-bottom: 1.2rem;
+    /* badges mots-clés */
+    .keywords-legend { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.2rem; }
+    .kw-item { display: flex; align-items: center; gap: .4rem; font-size: .78rem; color: rgba(246,241,232,.6); }
+    .kw-badge {
+      font-family: 'DM Mono', monospace; font-size: .68rem; font-weight: 500;
+      padding: .18rem .55rem; border-radius: 20px; text-transform: uppercase; letter-spacing: .07em;
     }
-    .scenario-btn {
-      background: rgba(184,132,42,.18);
-      border: 1px solid rgba(184,132,42,.4);
-      color: var(--gold-pale);
-      border-radius: 20px;
-      padding: .35rem .9rem;
-      font-size: .78rem;
-      font-family: 'DM Mono', monospace;
-      cursor: pointer;
-      transition: background .18s, border-color .18s;
-    }
-    .scenario-btn:hover, .scenario-btn.active {
-      background: rgba(184,132,42,.38);
-      border-color: var(--gold);
-      color: #fff;
-    }
+    .kw-badge.ctx { background: rgba(184,132,42,.25); color: #e8c97a; border: 1px solid rgba(184,132,42,.4); }
+    .kw-badge.fmt { background: rgba(90,122,92,.25); color: #9fcca2; border: 1px solid rgba(90,122,92,.4); }
+    .kw-badge.lng { background: rgba(100,120,180,.25); color: #a8b8f0; border: 1px solid rgba(100,120,180,.4); }
+    .kw-badge.niv { background: rgba(194,112,106,.25); color: #f0a8a4; border: 1px solid rgba(194,112,106,.4); }
 
     #prompt-input {
-      width: 100%;
-      background: rgba(255,255,255,.07);
-      border: 1px solid rgba(184,132,42,.35);
-      border-radius: 10px;
-      color: var(--parchment);
-      font-family: 'Source Serif 4', serif;
-      font-size: .92rem;
-      line-height: 1.6;
-      padding: .95rem 1.1rem;
-      resize: vertical;
-      min-height: 110px;
-      outline: none;
-      transition: border-color .2s;
+      width: 100%; background: rgba(255,255,255,.07); border: 1px solid rgba(184,132,42,.35);
+      border-radius: 10px; color: var(--parchment); font-family: 'Source Serif 4', serif;
+      font-size: .92rem; line-height: 1.6; padding: .95rem 1.1rem; resize: vertical;
+      min-height: 120px; outline: none; transition: border-color .2s;
     }
     #prompt-input:focus { border-color: var(--gold); }
-    #prompt-input::placeholder { color: rgba(246,241,232,.35); }
+    #prompt-input::placeholder { color: rgba(246,241,232,.3); }
 
     .play-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: .85rem;
-      flex-wrap: wrap;
-      gap: .6rem;
+      display: flex; align-items: center; justify-content: space-between;
+      margin-top: .85rem; flex-wrap: wrap; gap: .6rem;
     }
-    .char-count {
-      font-family: 'DM Mono', monospace;
-      font-size: .72rem;
-      color: rgba(246,241,232,.4);
-    }
+    .char-count { font-family: 'DM Mono', monospace; font-size: .72rem; color: rgba(246,241,232,.4); }
     #send-btn {
-      background: var(--gold);
-      color: var(--ink);
-      border: none;
-      border-radius: 8px;
-      padding: .65rem 1.5rem;
-      font-family: 'Source Serif 4', serif;
-      font-size: .9rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background .18s, transform .12s;
-      display: flex; align-items: center; gap: .5rem;
+      background: var(--gold); color: var(--ink); border: none; border-radius: 8px;
+      padding: .65rem 1.5rem; font-family: 'Source Serif 4', serif; font-size: .9rem;
+      font-weight: 600; cursor: pointer; transition: background .18s, transform .12s;
     }
-    #send-btn:hover:not(:disabled) { background: #c9922f; transform: translateY(-1px); }
-    #send-btn:disabled { opacity: .55; cursor: not-allowed; transform: none; }
+    #send-btn:hover { background: #c9922f; transform: translateY(-1px); }
+    .open-hint { margin-top: .6rem; font-size: .78rem; color: rgba(246,241,232,.38); font-style: italic; }
 
-    /* ── RÉPONSE ── */
-    #response-area {
-      margin-top: 1.5rem;
-      display: none;
+    /* ── SCORE ── */
+    #score-area { margin-top: 1.6rem; }
+    .score-top {
+      display: flex; align-items: baseline; justify-content: space-between;
+      margin-bottom: .5rem;
     }
-    .response-header {
+    .score-label { font-family: 'DM Mono', monospace; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(246,241,232,.5); }
+    #score-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--gold); transition: color .4s; }
+    .score-denom { font-size: 1rem; color: rgba(184,132,42,.5); }
+
+    .score-bar-track {
+      height: 8px; background: rgba(255,255,255,.1); border-radius: 99px; overflow: hidden; margin-bottom: 1.1rem;
+    }
+    #score-bar {
+      height: 100%; width: 0%; border-radius: 99px;
+      background: linear-gradient(90deg, var(--rose), var(--gold), var(--sage));
+      transition: width .5s cubic-bezier(.4,0,.2,1);
+    }
+
+    #criteria-list { display: flex; flex-direction: column; gap: .5rem; }
+    .crit-row {
       display: flex; align-items: center; gap: .6rem;
-      margin-bottom: .75rem;
+      background: rgba(255,255,255,.05); border-radius: 8px; padding: .55rem .85rem;
+      transition: background .3s;
     }
-    .response-dot {
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: var(--sage);
-    }
-    .response-label {
-      font-family: 'DM Mono', monospace;
-      font-size: .72rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: rgba(246,241,232,.5);
-    }
-    #response-text {
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.1);
-      border-radius: 10px;
-      padding: 1.1rem 1.3rem;
-      font-size: .9rem;
-      line-height: 1.7;
-      color: rgba(246,241,232,.9);
-      white-space: pre-wrap;
-      min-height: 60px;
-    }
-    .loading-dots span {
-      display: inline-block;
-      animation: blink 1.2s infinite;
-      opacity: 0;
-    }
-    .loading-dots span:nth-child(2) { animation-delay: .2s; }
-    .loading-dots span:nth-child(3) { animation-delay: .4s; }
-    @keyframes blink { 0%,80%,100%{opacity:0} 40%{opacity:1} }
+    .crit-row.ok { background: rgba(90,122,92,.18); }
+    .crit-icon { font-size: .9rem; width: 18px; text-align: center; flex-shrink: 0; }
+    .crit-msg { font-size: .82rem; color: rgba(246,241,232,.6); }
+    .crit-row.ok .crit-msg { color: rgba(159,204,162,.85); }
 
-    /* ── CONSEIL FEEDBACK ── */
-    #feedback-area {
-      margin-top: 1rem;
-      display: none;
-    }
-    #feedback-box {
-      background: rgba(90,122,92,.18);
-      border: 1px solid rgba(90,122,92,.4);
-      border-radius: 10px;
-      padding: 1rem 1.2rem;
-      font-size: .85rem;
-      color: rgba(246,241,232,.85);
-      line-height: 1.6;
-    }
-    .feedback-label {
-      font-family: 'DM Mono', monospace;
-      font-size: .68rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--sage);
-      margin-bottom: .4rem;
-      display: block;
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      text-align: center;
-      padding: 2.5rem 1rem;
-      font-size: .82rem;
-      color: var(--ink-soft);
-      border-top: 1px solid var(--border);
-    }
-    footer a { color: var(--gold); text-decoration: none; }
-
-    /* ── ERREUR ── */
-    .error-msg {
-      color: #e07070;
-      font-family: 'DM Mono', monospace;
-      font-size: .78rem;
-      margin-top: .5rem;
-      display: none;
+    #score-comment {
+      margin-top: 1rem; font-size: .85rem; color: rgba(246,241,232,.65);
+      font-style: italic; min-height: 1.2em; transition: opacity .3s;
     }
 
     @media (max-width: 500px) {
@@ -378,7 +217,6 @@
 </head>
 <body>
 
-<!-- ═══════════════════════ HEADER ═══════════════════════ -->
 <header>
   <p class="header-eyebrow">Guide personnel · Claude & vous</p>
   <h1>Bienvenue, <em>Caroline</em></h1>
@@ -386,32 +224,21 @@
   <div class="header-seal">⚖</div>
 </header>
 
-<!-- ═══════════════════════ CONTENU ═══════════════════════ -->
 <div class="container">
 
-  <!-- SECTION 1 : C'est quoi Claude -->
   <section>
-    <h2>
-      <span class="num">I.</span>
-      Qu'est-ce que Claude, exactement ?
-    </h2>
+    <h2><span class="num">I.</span>Qu'est-ce que Claude, exactement ?</h2>
     <p>Claude est un <strong>assistant intelligent</strong> développé par Anthropic. On l'appelle un LLM (Large Language Model) : un programme qui a lu une quantité immense de textes — livres, articles, jugements, traités — et qui a appris à répondre de façon cohérente et nuancée.</p>
     <p>Pensez-y comme à un <strong>assistant érudit et disponible 24h/24</strong>, capable de rédiger, résumer, expliquer, reformuler, structurer… mais qui a besoin d'une bonne consigne pour donner le meilleur de lui-même.</p>
-
     <div class="card">
       <p class="card-title">⚠ Ce que Claude n'est pas</p>
       <p>Claude n'est <strong>pas infaillible</strong>. Il peut se tromper sur des dates, inventer une référence bibliographique, ou mal interpréter une question ambiguë. Traitez ses réponses comme une première version à vérifier — surtout pour tout ce qui touche à la jurisprudence récente ou aux citations précises.</p>
     </div>
   </section>
 
-  <!-- SECTION 2 : L'art du prompt -->
   <section>
-    <h2>
-      <span class="num">II.</span>
-      L'art du prompt : comment bien lui parler
-    </h2>
+    <h2><span class="num">II.</span>L'art du prompt : comment bien lui parler</h2>
     <p>Un <strong>prompt</strong>, c'est simplement ce que vous tapez pour lui demander quelque chose. La qualité de sa réponse dépend directement de la qualité de votre demande.</p>
-
     <ul class="rules">
       <li>
         <div class="rule-icon">🎯</div>
@@ -430,26 +257,22 @@
       <li>
         <div class="rule-icon">📏</div>
         <div class="rule-body">
-          <strong>Précisez le niveau et la longueur</strong>
-          <span>"Pour des étudiants de M2", "en 300 mots", "de façon accessible à des non-juristes"… Autant d'indications utiles.</span>
+          <strong>Précisez la longueur souhaitée</strong>
+          <span>"En 300 mots", "en une page", "5 points maximum"… autant de garde-fous utiles.</span>
         </div>
       </li>
       <li>
-        <div class="rule-icon">🔄</div>
+        <div class="rule-icon">🎓</div>
         <div class="rule-body">
-          <strong>Itérez : corrigez, affinez, relancez</strong>
-          <span>Si la réponse n'est pas satisfaisante, dites-le : "C'est trop général, développe la partie sur…" ou "Reformule en évitant le jargon."</span>
+          <strong>Indiquez le niveau du public</strong>
+          <span>"Pour des étudiants de M2", "accessible à des non-juristes", "pour un jury de soutenance"…</span>
         </div>
       </li>
     </ul>
   </section>
 
-  <!-- SECTION 3 : Exemples -->
   <section>
-    <h2>
-      <span class="num">III.</span>
-      Avant / après : la différence qu'un bon prompt fait
-    </h2>
+    <h2><span class="num">III.</span>Avant / après : la différence qu'un bon prompt fait</h2>
     <p>Voici deux exemples tirés de votre quotidien de chercheuse et d'enseignante.</p>
 
     <p><strong>Exemple 1 — Préparer un cours</strong></p>
@@ -483,58 +306,65 @@
 
   <!-- SECTION 4 : PLAYGROUND -->
   <section>
-    <h2>
-      <span class="num">IV.</span>
-      À vous de jouer — essayez ici
-    </h2>
-    <p>La zone ci-dessous est connectée à Claude. Tapez votre propre demande, ou cliquez sur une suggestion pour partir d'un exemple, et voyez la réponse en temps réel.</p>
+    <h2><span class="num">IV.</span>À vous de jouer — entraînez-vous ici</h2>
+    <p>Rédigez votre prompt dans l'encadré. L'analyseur vérifie en temps réel si vous avez pensé aux quatre ingrédients clés et vous donne un score sur 10. Quand vous êtes satisfaite, cliquez pour l'envoyer à Claude.</p>
 
     <div id="playground">
-      <h3>✦ Votre terrain d'entraînement</h3>
-      <p class="play-desc">Testez vos prompts directement ici — aucune inscription requise.</p>
+      <h3>✦ Atelier prompt</h3>
+      <p class="play-desc">Écrivez votre demande et regardez votre score monter au fil des mots.</p>
 
-      <div class="scenario-btns" id="scenarios">
-        <button class="scenario-btn" data-prompt="Je prépare un cours de L2 sur la distinction droit public / droit privé dans la tradition française. Propose-moi une introduction de cours courte (15 lignes max) qui accroche l'attention des étudiants avec un exemple historique frappant.">Intro de cours accrocheur</button>
-        <button class="scenario-btn" data-prompt="Je suis HDR et j'encadre un étudiant de M2 dont la thèse porte sur les ordonnances royales du XVe siècle. Il a du mal à formuler une problématique. Quelles questions il devrait se poser pour la construire ? Donne-moi 5 questions structurantes.">Problématique de thèse</button>
-        <button class="scenario-btn" data-prompt="Rédige 10 questions de quiz pour évaluer la compréhension d'étudiants de L3 sur la Révolution juridique française (1789-1804) : codification, abolition des ordres, nouveaux principes. Mélange QCM et questions courtes.">Quiz d'évaluation</button>
-        <button class="scenario-btn" data-prompt="J'écris un article de recherche sur l'influence du droit canonique sur la procédure civile médiévale. Propose-moi un plan en 3 parties avec leurs sous-parties et une brève justification pour chaque choix.">Plan d'article</button>
+      <div class="keywords-legend">
+        <div class="kw-item"><span class="kw-badge ctx">contexte</span> Qui vous êtes, le sujet</div>
+        <div class="kw-item"><span class="kw-badge fmt">format</span> Plan, liste, tableau…</div>
+        <div class="kw-item"><span class="kw-badge lng">longueur</span> Mots, pages, points…</div>
+        <div class="kw-item"><span class="kw-badge niv">niveau</span> L1, M2, jury…</div>
       </div>
 
-      <textarea id="prompt-input" placeholder="Écrivez votre prompt ici… Soyez précise : qui vous êtes, ce que vous voulez, sous quelle forme."></textarea>
+      <textarea id="prompt-input" placeholder="Ex : Je prépare un cours d'1h pour des L3 en histoire du droit sur les sources médiévales. Propose un plan en 3 parties avec un exemple concret pour chacune (300 mots max)."></textarea>
 
       <div class="play-footer">
         <span class="char-count" id="char-count">0 caractère</span>
-        <button id="send-btn">
-          <span id="btn-label">Envoyer à Claude</span>
-          <span>→</span>
-        </button>
+        <button id="send-btn">Ouvrir dans Claude →</button>
       </div>
-      <p class="error-msg" id="error-msg">Une erreur s'est produite. Réessayez dans un instant.</p>
+      <p class="open-hint">Claude s'ouvrira dans un nouvel onglet avec votre prompt déjà écrit ✨</p>
 
-      <div id="response-area">
-        <div class="response-header">
-          <div class="response-dot"></div>
-          <span class="response-label">Réponse de Claude</span>
+      <div id="score-area">
+        <div class="score-top">
+          <span class="score-label">Score de votre prompt</span>
+          <span id="score-num">0<span class="score-denom">/10</span></span>
         </div>
-        <div id="response-text"></div>
-      </div>
+        <div class="score-bar-track"><div id="score-bar"></div></div>
 
-      <div id="feedback-area">
-        <div id="feedback-box">
-          <span class="feedback-label">💡 Conseil pour améliorer votre prompt</span>
-          <div id="feedback-text"></div>
+        <div id="criteria-list">
+          <div class="crit-row" id="crit-ctx">
+            <span class="crit-icon">○</span>
+            <span class="kw-badge ctx">contexte</span>
+            <span class="crit-msg">Précisez qui vous êtes et quel est le sujet</span>
+          </div>
+          <div class="crit-row" id="crit-fmt">
+            <span class="crit-icon">○</span>
+            <span class="kw-badge fmt">format</span>
+            <span class="crit-msg">Demandez un format précis (plan, liste, tableau…)</span>
+          </div>
+          <div class="crit-row" id="crit-lng">
+            <span class="crit-icon">○</span>
+            <span class="kw-badge lng">longueur</span>
+            <span class="crit-msg">Indiquez une longueur souhaitée (mots, pages…)</span>
+          </div>
+          <div class="crit-row" id="crit-niv">
+            <span class="crit-icon">○</span>
+            <span class="kw-badge niv">niveau</span>
+            <span class="crit-msg">Précisez le niveau du public visé</span>
+          </div>
         </div>
+
+        <div id="score-comment"></div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 5 : Idées d'usages -->
   <section>
-    <h2>
-      <span class="num">V.</span>
-      Ce que vous pouvez lui demander au quotidien
-    </h2>
-
+    <h2><span class="num">V.</span>Ce que vous pouvez lui demander au quotidien</h2>
     <div class="card">
       <p class="card-title">📚 Recherche & écriture</p>
       <p>Structurer un plan d'article, reformuler un paragraphe trop dense, suggérer une bibliographie thématique (à vérifier !), résumer un article en anglais, trouver des pistes de comparaison internationale.</p>
@@ -555,105 +385,103 @@
 
 </div>
 
-<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
 <footer>
-  <p>Fait avec ♥ pour <strong>Caroline</strong> · <a href="https://claude.ai" target="_blank">Ouvrir Claude</a></p>
+  <p style="text-align:center; padding:2.5rem 1rem; font-size:.82rem; color:var(--ink-soft); border-top:1px solid var(--border);">
+    Fait avec ♥ pour <strong>Caroline</strong> · <a href="https://claude.ai" target="_blank" style="color:var(--gold);text-decoration:none;">Ouvrir Claude</a>
+  </p>
 </footer>
 
-<!-- ═══════════════════════ SCRIPT ═══════════════════════ -->
 <script>
-  const input    = document.getElementById('prompt-input');
-  const sendBtn  = document.getElementById('send-btn');
-  const btnLabel = document.getElementById('btn-label');
-  const charCount= document.getElementById('char-count');
-  const respArea = document.getElementById('response-area');
-  const respText = document.getElementById('response-text');
-  const fbArea   = document.getElementById('feedback-area');
-  const fbText   = document.getElementById('feedback-text');
-  const errorMsg = document.getElementById('error-msg');
+  const input     = document.getElementById('prompt-input');
+  const sendBtn   = document.getElementById('send-btn');
+  const charCount = document.getElementById('char-count');
+  const scoreNum  = document.getElementById('score-num');
+  const scoreBar  = document.getElementById('score-bar');
+  const comment   = document.getElementById('score-comment');
 
-  // char counter
-  input.addEventListener('input', () => {
-    const n = input.value.length;
-    charCount.textContent = n + (n <= 1 ? ' caractère' : ' caractères');
-  });
-
-  // scenario buttons
-  document.getElementById('scenarios').addEventListener('click', e => {
-    const btn = e.target.closest('.scenario-btn');
-    if (!btn) return;
-    document.querySelectorAll('.scenario-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    input.value = btn.dataset.prompt;
-    input.dispatchEvent(new Event('input'));
-    input.focus();
-  });
-
-  // send
-  sendBtn.addEventListener('click', async () => {
-    const prompt = input.value.trim();
-    if (!prompt) return;
-
-    // UI: loading
-    sendBtn.disabled = true;
-    btnLabel.textContent = 'Claude réfléchit…';
-    errorMsg.style.display = 'none';
-    fbArea.style.display = 'none';
-    respArea.style.display = 'block';
-    respText.innerHTML = '<span class="loading-dots"><span>•</span><span>•</span><span>•</span></span>';
-
-    try {
-      // Appel principal
-      const res = await fetch('https://api.anthropic.com/v1/messages', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          model: 'claude-sonnet-4-6',
-          max_tokens: 1000,
-          system: "Tu es Claude, un assistant bienveillant et érudit. L'utilisatrice s'appelle Caroline, elle est professeure des universités (HDR) en histoire du droit. Elle encadre des thèses et des mémoires, enseigne en licence et master, et rédige des articles de recherche. Réponds en français, avec rigueur et chaleur. Sois concret et directement utile.",
-          messages: [{ role: 'user', content: prompt }]
-        })
-      });
-
-      const data = await res.json();
-      if (data.error) throw new Error(data.error.message);
-
-      const text = data.content?.find(b => b.type === 'text')?.text || '';
-      respText.textContent = text;
-
-      // Feedback sur le prompt
-      await getPromptFeedback(prompt);
-
-    } catch (err) {
-      respText.textContent = '';
-      errorMsg.style.display = 'block';
-      console.error(err);
-    } finally {
-      sendBtn.disabled = false;
-      btnLabel.textContent = 'Envoyer à Claude';
+  const criteria = {
+    ctx: {
+      el: document.getElementById('crit-ctx'),
+      ok: false,
+      // mots-clés signalant qu'elle parle de qui elle est ou du sujet
+      test: t => /\b(je suis|je prépare|je rédige|je travaille|je enseigne|j'encadre|professeur|HDR|cours|article|thèse|mémoire|recherche|étudiant|histoire du droit|droit|sujet|contexte)\b/i.test(t),
+      msg_ok: '✓ Contexte présent',
+      msg_no: 'Précisez qui vous êtes et quel est le sujet'
+    },
+    fmt: {
+      el: document.getElementById('crit-fmt'),
+      ok: false,
+      test: t => /\b(plan|liste|tableau|résumé|fiche|présentation|points?|parties?|paragraphe|introduction|conclusion|rédige|propose|explique|compare|analyse|formule|structure|bullet|numéroté|étapes?)\b/i.test(t),
+      msg_ok: '✓ Format demandé',
+      msg_no: 'Demandez un format précis (plan, liste, tableau…)'
+    },
+    lng: {
+      el: document.getElementById('crit-lng'),
+      ok: false,
+      test: t => /\b(\d+\s*(mots?|lignes?|pages?|points?|parties?|exemples?)|court|long|bref|concis|détaillé|synthétique|max|maximum|environ|approximativement)\b/i.test(t),
+      msg_ok: '✓ Longueur précisée',
+      msg_no: 'Indiquez une longueur souhaitée (mots, pages…)'
+    },
+    niv: {
+      el: document.getElementById('crit-niv'),
+      ok: false,
+      test: t => /\b(L1|L2|L3|M1|M2|master|licence|doctorat|thèse|jury|grand public|non.juriste|débutant|expert|avancé|initié|chercheur|étudiant|élève)\b/i.test(t),
+      msg_ok: '✓ Niveau du public indiqué',
+      msg_no: 'Précisez le niveau du public visé'
     }
-  });
+  };
 
-  async function getPromptFeedback(prompt) {
-    try {
-      const res = await fetch('https://api.anthropic.com/v1/messages', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          model: 'claude-sonnet-4-6',
-          max_tokens: 1000,
-          system: "Tu es un coach en prompting pédagogique. Donne un conseil court (2-3 phrases max) sur comment ce prompt aurait pu être encore meilleur. Sois positif, bienveillant et précis. Si le prompt était déjà très bien, dis-le simplement. Réponds en français, sans formule d'introduction.",
-          messages: [{ role: 'user', content: "Évalue ce prompt et donne un conseil d'amélioration : " + prompt }]
-        })
-      });
-      const data = await res.json();
-      const fb = data.content?.find(b => b.type === 'text')?.text || '';
-      if (fb) {
-        fbText.textContent = fb;
-        fbArea.style.display = 'block';
-      }
-    } catch(_) { /* silencieux */ }
+  const comments = [
+    ['0',  'Commencez à écrire votre demande…'],
+    ['3',  'Bonne amorce ! Pensez à préciser ce que vous attendez.'],
+    ['5',  'Vous y êtes presque — il manque encore un ou deux éléments.'],
+    ['8',  'Très bon prompt ! Claude devrait bien vous répondre.'],
+    ['10', '✦ Prompt parfait — tous les ingrédients sont là. Envoyez-le !'],
+  ];
+
+  function getComment(score) {
+    let msg = comments[0][1];
+    for (const [threshold, text] of comments) {
+      if (score >= Number(threshold)) msg = text;
+    }
+    return msg;
   }
+
+  function getScoreColor(score) {
+    if (score <= 3)  return '#c2706a';
+    if (score <= 6)  return '#b8842a';
+    return '#5a7a5c';
+  }
+
+  function analyse() {
+    const text = input.value;
+    const n = text.length;
+    charCount.textContent = n + (n <= 1 ? ' caractère' : ' caractères');
+
+    let score = 0;
+    for (const [key, crit] of Object.entries(criteria)) {
+      crit.ok = crit.test(text);
+      if (crit.ok) score += 2.5;
+      crit.el.classList.toggle('ok', crit.ok);
+      crit.el.querySelector('.crit-icon').textContent = crit.ok ? '✓' : '○';
+      crit.el.querySelector('.crit-msg').textContent  = crit.ok ? crit.msg_ok : crit.msg_no;
+    }
+
+    const rounded = Math.round(score * 10) / 10;
+    scoreNum.innerHTML = rounded + '<span class="score-denom">/10</span>';
+    scoreBar.style.width = (score * 10) + '%';
+    scoreNum.style.color = getScoreColor(score);
+    comment.textContent = getComment(score);
+  }
+
+  input.addEventListener('input', analyse);
+  analyse(); // état initial
+
+  sendBtn.addEventListener('click', () => {
+    const prompt = input.value.trim();
+    if (!prompt) { input.focus(); return; }
+    window.open('https://claude.ai/new?q=' + encodeURIComponent(prompt), '_blank');
+  });
 </script>
 </body>
 </html>
