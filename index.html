@@ -170,6 +170,7 @@
       background: var(--gold); color: var(--ink); border: none; border-radius: 8px;
       padding: .65rem 1.5rem; font-family: 'Source Serif 4', serif; font-size: .9rem;
       font-weight: 600; cursor: pointer; transition: background .18s, transform .12s;
+      text-decoration: none; display: inline-block;
     }
     #send-btn:hover { background: #c9922f; transform: translateY(-1px); }
     .open-hint { margin-top: .6rem; font-size: .78rem; color: rgba(246,241,232,.38); font-style: italic; }
@@ -324,7 +325,7 @@
 
       <div class="play-footer">
         <span class="char-count" id="char-count">0 caractère</span>
-        <button id="send-btn">Ouvrir dans Claude →</button>
+        <a id="send-btn" href="https://claude.ai" target="_blank" rel="noopener">Ouvrir dans Claude →</a>
       </div>
       <p class="open-hint">Claude s'ouvrira dans un nouvel onglet avec votre prompt déjà écrit ✨</p>
 
@@ -393,7 +394,6 @@
 
 <script>
   const input     = document.getElementById('prompt-input');
-  const sendBtn   = document.getElementById('send-btn');
   const charCount = document.getElementById('char-count');
   const scoreNum  = document.getElementById('score-num');
   const scoreBar  = document.getElementById('score-bar');
@@ -474,14 +474,19 @@
     comment.textContent = getComment(score);
   }
 
-  input.addEventListener('input', analyse);
-  analyse(); // état initial
+  input.addEventListener('input', () => { analyse(); updateLink(); });
+  analyse();
+  updateLink();
 
-  sendBtn.addEventListener('click', () => {
+  function updateLink() {
     const prompt = input.value.trim();
-    if (!prompt) { input.focus(); return; }
-    window.open('https://claude.ai/new?q=' + encodeURIComponent(prompt), '_blank');
-  });
+    const sendBtn = document.getElementById('send-btn');
+    if (prompt) {
+      sendBtn.href = 'https://claude.ai/new?q=' + encodeURIComponent(prompt);
+    } else {
+      sendBtn.href = 'https://claude.ai';
+    }
+  }
 </script>
 </body>
 </html>
